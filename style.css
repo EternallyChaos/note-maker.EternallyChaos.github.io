@@ -1,0 +1,124 @@
+body {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: blueviolet;
+}
+
+.container {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.note-box {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+p,
+h3 {
+  font-size: large;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin: 10px;
+}
+#note-field {
+  width: 100%;
+  resize: vertical;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 15px;
+  border: 0;
+  outline: none;
+  height: 150px;
+  box-shadow: 0 0 15px 4px rgba(53, 6, 96, 0.06);
+  transition: box-shadow linear 0.5s;
+}
+
+#note-field:focus {
+  box-shadow: 0 0 20px #143b91;
+}
+
+button {
+  width: 95%;
+  margin: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+}
+
+button:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
+  color: #202124;
+}
+
+button:focus {
+  border-color: black;
+  outline: none;
+}
+
+#note-s {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#note-s > div {
+  /* border: 1px solid rgb(222, 217, 217); */
+  flex: 50%;
+  flex: 1 1 auto;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .note-box {
+    width: 75%;
+    height: 100vh;
+  }
+
+  #note-s {
+  width: 110%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+}
